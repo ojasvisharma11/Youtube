@@ -1,0 +1,38 @@
+<div class="row person-info pb-1 ms-n3">
+    <div class="col-2 text-center justify-content-center align-items-center align-middle">
+        <div class="ms-3 row col-8 justify-content-center">
+            <img [src]="infoArtist.src" style="border-radius: 50%;" class="img-fluid align-middle pt-2">
+        </div>
+        <div class="row col-auto fw-bold text-center justify-content-center">
+            {{infoArtist.name}}
+        </div>
+        <div class="row col-auto fw-normal text-center justify-content-center">
+            {{infoArtist.subscribers}}
+        </div>
+    </div>
+    <div class="col-10 pt-4 justify-content-end">
+        <div class="text-end  align-end">
+            <button class="btn btn-danger text-center text-uppercase">Subscribe</button>
+        </div>
+    </div>
+
+    <!-- <div class="info-class ps-4 row col-auto fw-normal text-start justify-content-center" [ngStyle] = "{overflow: read_more == true ? 'hidden' : 'visible'}" [ngStyle] = "{height: read_more == true ? '100px' : '100'}"> -->
+    <div class="info-class ps-4 row col-auto fw-normal text-start justify-content-center"
+        [ngClass]="{show: !read_more}">
+        {{infoArtist.info}}
+    </div>
+    <div class="div row m-0" *ngIf="read_more">
+        <button class="btn btn-outline-secoundary p-0" style="font-size: 13px;" (click)="show_details()">
+            <div class="row text-center justify-content-center">Read More</div>
+            <div class="row"><i class="fas fa-angle-double-down" style="font-size: 6px;"></i></div>
+        </button>
+
+    </div>
+    
+    <div class="div row" *ngIf="!read_more">
+        <button class="btn btn-outline-secoundary p-0" style="font-size: 12px;" (click)="hide_details()">
+            <div class="row text-center justify-content-center">Hide</div>
+            <div class="row"><i class="fas fa-angle-double-up" style="font-size: 6px;"></i></div>
+        </button>
+    </div>
+</div>

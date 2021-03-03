@@ -1,0 +1,35 @@
+<!-- <div class="row card2" *ngFor="let recommendation of recommendations; let i = index" (click)="updateCard(i)">
+    <div class="col mx-auto p-1">
+        <div class="row g-0 overflow-hidden flex-md-row shadow-sm position-relative">
+            <div class="col-5">
+                <img src="{{recommendations[i].src}}" width="200" height="100" class="img-fluid">
+            </div>
+            <div class="col p-1 d-flex flex-column position-static">
+                <div class="text-success fs-8 a1" *ngIf="recommendations[i].trending"><i class="fas fa-chart-line"></i>
+                    Trending </div>
+                <div class="fw-normal a2">{{recommendations[i].title}}</div>
+                <div class="text-muted fw-lighter a3">{{recommendations[i].company}} <i
+                        class="fas fa-check-circle verified"></i></div>
+                <div class="text-muted fw-lighter a3">{{recommendations[i].views}}M<i
+                        class="fas fa-circle dot align-middle"></i> 3 years ago
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="row card2 overflow-hidden p-1" *ngFor="let recommendation of recommendations; let i = index" (click)="updateCard(i)">
+    <div class="col-5 col-xs-12 p-1 overflow-hidden img-block position-relative align-middle" >
+        <img src="{{recommendations[i].src}}" class = "img-fluid overflow-hidden">
+    </div>
+    <div class="col-7 col-xs-12 h-xs-100 h-sm-100 h-md-100 p-1 overflow-visible text-wrap">
+        <div class="text-success fs-8 a1 overflow-hidden" *ngIf="recommendations[i].trending"><i class="fas fa-chart-line"></i> Trending
+        </div>
+        <div class="fw-normal a2 overflow-hidden">{{recommendations[i].title}}</div>
+        <div class="text-muted fw-lighter a3 overflow-hidden">{{recommendations[i].company}} <i
+                class="fas fa-check-circle verified overflow-hidden"></i></div>
+        <div class="text-muted fw-lighter a3 overflow-hidden">{{recommendations[i].views}}M<i
+                class="fas fa-circle dot align-middle overflow-hidden"></i> 3 years ago
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+/* .fa-thumbs-down{
+    -webkit-transform: scaleX(-1);
+    text-transform: scaleX(-1);
+} */
+.fas{
+    cursor: pointer;
+}
+.fa-download{
+    color:gray ;
+    font-size: 20px;
+}
+
+.fa-share-alt{
+    color:gray ; 
+    font-size: 20px;
+}
+@keyframes downloading {
+    0%   {color: yellow;}
+    25%  {color: yellow;}
+    50%  {color: greenyellow;}
+    100% {color: green;}
+}
+
+@keyframes sharing {
+    0%   {color: lightblue;}
+    25%  {color: cyan;}
+    50%  {color: rgb(28, 135, 177);}
+    100% {color: blue;}
+}
+
+  /* The element to apply the animation to */
+.shared{
+    animation-name: sharing;
+    animation-duration: 2s;
+    color: blue;
+}
+
+.downloaded{
+    animation-name: downloading;
+    animation-duration: 2s;
+    color: green;
+}
+
+
+.fa-share-alt:hover{
+    color: blue;
+}
+.fa-download:hover{
+    color: green;
+}
+

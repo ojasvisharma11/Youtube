@@ -1,0 +1,13 @@
+
+.img-fluid{
+    height: width;
+}
+.info-class{
+    max-height: 110px;
+    overflow: hidden;
+    /* overflow:visibl; */
+}
+.show{
+    overflow: visible;
+    max-height:min-content;
+}

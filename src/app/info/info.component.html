@@ -1,0 +1,36 @@
+<ng-template *ngIf="true; then check()"></ng-template>
+
+<div class="row mx-auto fw-normal mt-2 fs-5">
+    {{ title }}
+</div>
+
+<div class="row my-0 fw-normal views">
+    <div class="col justify-content-start fw-light">
+        {{ views }},000,000 views
+    </div>
+    
+    <div class="col-5 row justify-content-end text-end ps-3">
+        <div class="col-auto">
+            <i class="fas fa-thumbs-up mx-1 align-middle" style="color:gray ; font-size: 20px;" (click) = "liked()" [ngStyle] = "{color: like}"></i><span style="color:gray">{{Likes}}</span>
+        </div>
+        
+        <div class="col-auto">
+            <i class="fas fa-thumbs-down mx-1 align-middle" style="color:gray ; font-size: 20px" (click) = "disliked()" [ngStyle] = "{color: dislike}"></i><span style="color:gray">{{dislikes}}</span>
+        </div>
+
+        <div class="col-auto">
+            <i class="fas fa-share-alt" (click) = "share_video()" [ngClass] = "{shared: share_status}"></i>
+        </div>
+
+        <div class="col-auto">
+            <i class="fas fa-download" id = "download" (click) = "download_video()" [ngClass] = "{downloaded: download_status}"></i>
+        </div>
+        
+        <!-- <i class="fas fa-thumbs-up"></i> -->
+        <!-- <i class="fas fa-thumbs-up"></i> -->
+    </div>
+    <!-- <i class="fas fa-ellipsis-v"></i> <i class="far fa-clock"></i>-->
+</div>
+<hr>
+<app-info-artist [infoArtist] = "info" [read_more] = true [subscribed] = false></app-info-artist>
+<hr>

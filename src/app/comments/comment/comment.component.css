@@ -1,0 +1,9 @@
+.fas{
+    cursor: pointer;
+}
+.square:before{
+    /* display: block; */
+    /* padding-top: 100%;  */
+}.img-fluid{
+    height: width;
+}
